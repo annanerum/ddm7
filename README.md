@@ -9,7 +9,7 @@ DATA_DIR  <- file.path(BASE_DIR, "data_sim_svhier")
 **important**
 BASE_DIR_RSTUDIO  <- "~/svhier" --> change to where everything is saved 
 
---
+---
 
 if CmdStan cannot be found / installed --> install manually in the terminal of RStudio by: 
 
@@ -18,7 +18,7 @@ install.packages("cmdstanr", repos = c("https://stan-dev.r-universe.dev", getOpt
 
 library(cmdstanr)
 
---
+---
 
 check_cmdstan_toolchain(fix = TRUE)   # check for C++ compiler and make
 
