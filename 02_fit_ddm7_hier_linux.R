@@ -2,7 +2,7 @@ options(error = NULL)
 
 
 BASE_DIR_RSTUDIO  <- "~/svhier"   # gucken ob das stimmt dann
-REPS              <- 1:3
+REPS              <- 1:5
 N_PERSON          <- 100         
 ITER_WARMUP       <- 500
 ITER_SAMPLING     <- 500
