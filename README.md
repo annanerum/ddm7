@@ -34,7 +34,7 @@ cd ddm7
 
 nohup Rscript 02_fit_ddm7_hier_linux.R . > log_ddm7.txt 2>&1 &
 
-- eatch log:
+- logging:
 
 tail -f log_ddm7.txt
 
