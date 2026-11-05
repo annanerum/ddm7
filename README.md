@@ -1,3 +1,32 @@
+# Terminal stuff
+
+- Install R: I guess you have admin rights right? so on Ubuntu/Debian:
+sudo apt update && sudo apt install -y r-base build-essential
+- on fedora or so: sudo dnf install -y R gcc-c++ make
+- or we do:
+cd ~
+
+curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba
+
+./bin/micromamba create -y -p ~/ddm-env -c conda-forge r-base r-dplyr r-posterior cxx-compiler make
+eval "$(./bin/micromamba shell hook -s bash)"
+
+micromamba activate ~/ddm-env
+
+which Rscript g++ make       
+(then they should all have a path)
+
+- get the files:
+git clone https://github.com/annanerum/ddm7.git
+
+cd ddm7
+
+- start the run:
+nohup Rscript 02_fit_ddm7_hier_linux.R . > log_ddm7.txt 2>&1 &
+
+- eatch log:
+tail -f log_ddm7.txt
+
 # To check 
 
 data_sim_svhier --> Daten aus Simulation --> put inside the BASE_DIR_RSTUDIO in 02_fit_ddm7_hier_linux.R 
